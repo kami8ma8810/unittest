@@ -1,5 +1,4 @@
 import { add, sub } from ".";
-import { describe, test, expect } from 'vitest'
 
 describe("四則演算", () => {
   describe("add", () => {
