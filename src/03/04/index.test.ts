@@ -3,10 +3,15 @@ import { add, sub } from ".";
 describe("四則演算", () => {
   describe("add", () => {
     test("返り値は、第一引数と第二引数の「和」である", () => {
-      expect(add(50, 50)).toBe(100);
+      expect(add(100, 50)).toBe(100);
     });
     test("合計の上限は、'100'である", () => {
       expect(add(70, 80)).toBe(100);
+    });
+    test("例外のスロー", () => {
+      expect(()=>{
+        add(101, 50)
+      }).toThrow();
     });
   });
   describe("sub", () => {
